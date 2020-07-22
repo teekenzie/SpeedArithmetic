@@ -17,7 +17,7 @@ If you would like to run the program, simply download the code to your local dev
 ## Inspiration
 _________
 
-## Improvement
+## Future Development
 Include voice that would read the numbers one at a time when the numbers are generated. This way, it could simulate the hearing part of the competition. 
 
 ## Contact
