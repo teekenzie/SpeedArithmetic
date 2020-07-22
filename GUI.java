@@ -1,8 +1,9 @@
 import javax.swing.*;
 
 import java.awt.*;
-import java.text.*;
 import java.awt.event.*;
+import java.util.Objects;
+
 public class GUI extends JFrame
 {
 	JLabel labelTitle,labelTitle2 ,labelNumCounts, labelRange,labelRange2, labelInterval,
@@ -13,7 +14,6 @@ public class GUI extends JFrame
 	JComboBox<Integer> comboBoxInterval,comboBoxInterval2;
     public static void main(String [] args)
     {
-    	//new GUI2();
         new GUI();
     }
 
@@ -46,13 +46,13 @@ public class GUI extends JFrame
         
         buttonAllNums = new JButton("Display all numbers at once");
         thePanel.add(buttonAllNums);
-        buttonAllNums.setFont(new Font("Serfi",Font.TYPE1_FONT, 15));
+        buttonAllNums.setFont(new Font("Serfi", Font.BOLD, 15));
         buttonAllNums.setBounds(115, 150, 250, 75);
 		buttonAllNums.addActionListener(lForButton);
 		
 		buttonOneNum = new JButton("Display one number at a time");
 		thePanel.add(buttonOneNum);
-		buttonOneNum.setFont(new Font("Serfi",Font.TYPE1_FONT, 15));
+		buttonOneNum.setFont(new Font("Serfi", Font.BOLD, 15));
 		buttonOneNum.setBounds(115, 250, 250, 75);
 		buttonOneNum.addActionListener(lForButton);
 		
@@ -91,7 +91,7 @@ public class GUI extends JFrame
 		labelInterval.setBounds(100, 155, 200, 30);
 		labelInterval.setVisible(false);
 		
-		comboBoxInterval = new JComboBox<Integer>();
+		comboBoxInterval = new JComboBox<>();
 		thePanel.add(comboBoxInterval);
 		for (int i = 0; i<=15; i++) {	comboBoxInterval.addItem(i);}
 		comboBoxInterval.setBounds(275,155,40,30);
@@ -103,7 +103,7 @@ public class GUI extends JFrame
 		labelInterval3.setFont(new Font("Serif", Font.BOLD, 30 ));
 		labelInterval3.setVisible(false);
 		
-		comboBoxInterval2= new JComboBox<Integer>();
+		comboBoxInterval2= new JComboBox<>();
 		thePanel.add(comboBoxInterval2);
 		for (int i = 0; i< 10; i++) {	comboBoxInterval2.addItem(i);}
 		comboBoxInterval2.setBounds(330,155,40,30);
@@ -227,8 +227,8 @@ public class GUI extends JFrame
         {
         	boolean numCount = system.numCount(textFieldNumCounts.getText());
         	boolean range = system.range(textFieldRange1.getText(), textFieldRange2.getText());
-        	boolean interval = system.interval(comboBoxInterval.getSelectedItem().toString(),comboBoxInterval2.getSelectedItem().toString());
-        	if (range == false || numCount == false || interval == false)
+        	boolean interval = system.interval(Objects.requireNonNull(comboBoxInterval.getSelectedItem()).toString(), Objects.requireNonNull(comboBoxInterval2.getSelectedItem()).toString());
+        	if (!range || !numCount || !interval)
         	{
         		JOptionPane.showMessageDialog(null,  "Please Enter the Right Info", "Error",JOptionPane.ERROR_MESSAGE);
         		pageNum --;

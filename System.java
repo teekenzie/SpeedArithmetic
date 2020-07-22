@@ -1,6 +1,3 @@
-import java.time.Duration;
-import java.time.LocalTime;
-
 public class System {
 	String title, displayOption, title2, operation;
 	int numCount, min, max, maxDigit, inclusiveRange, answer, interval, index;
@@ -12,21 +9,13 @@ public class System {
 		title2 = "";
 		index =0;
 	}
-	public System(String option, int numCount, int min, int max, int interval, String operation)
-	{
-		displayOption = option; 
-		this.numCount = numCount;
-		this.min = min;
-		this.max = max;
-		this.interval = interval;
-		this.operation = operation;
-	}
+
 	public String getTitle(){ return title;}
 	public String getTitle2() {return title2;}
 	public void displayOption(String option)
 	{
 		displayOption = option;
-		if( option == "all")
+		if(option.equals("all"))
 		{
 			title = "Display all numbers at once ";
 		}
@@ -66,8 +55,7 @@ public class System {
 		title2 = title2 + "From " + min +" to " + max ;
 		return true;
 	}
-	public int getMin() {return min;}
-	public int getMax() {return max;}
+
 	public boolean interval(String a,String b)
 	{
 		int num1 =  Integer.parseInt(a);

@@ -1,11 +1,12 @@
 import javax.swing.*;
 import java.awt.*;
-import java.text.*;
 import java.time.Duration;
 import java.time.LocalTime;
 import java.awt.event.*;
 import javax.swing.ImageIcon;
 import java.awt.Image;
+import java.util.Objects;
+
 public class GUI2 extends JFrame
 {
     int length, width, result;
@@ -39,12 +40,12 @@ public class GUI2 extends JFrame
         ListenForButton lForButton = new ListenForButton();
         
         //correct = new ImageIcon("Correct_Icon.png");
-        correct = new ImageIcon(getClass().getClassLoader().getResource("Correct_Icon.png"));
+        correct = new ImageIcon(Objects.requireNonNull(getClass().getClassLoader().getResource("Correct_Icon.png")));
         correctImage = correct.getImage();
         correctImage = correctImage.getScaledInstance(30, 30, Image.SCALE_SMOOTH);
         correct = new ImageIcon(correctImage);
         //wrong = new ImageIcon("Wrong_Icon.png");
-        wrong = new ImageIcon(getClass().getClassLoader().getResource("Wrong_Icon.png"));
+        wrong = new ImageIcon(Objects.requireNonNull(getClass().getClassLoader().getResource("Wrong_Icon.png")));
         wrongImage = wrong.getImage();
         wrongImage = wrongImage.getScaledInstance(30, 30, Image.SCALE_SMOOTH);
         wrong = new ImageIcon(wrongImage);
@@ -61,7 +62,7 @@ public class GUI2 extends JFrame
         textFieldAnswer.setVisible(false);
         textFieldAnswer.addKeyListener(lForButton);
         
-        if(first == true) {
+        if(first) {
 	        labelReady = new JLabel("Ready!");
 	        thePanel.add(labelReady);
 	        labelReady.setFont(new Font("Serif", Font.BOLD, 30));
