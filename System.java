@@ -1,3 +1,6 @@
+/**
+ * Generates the random numbers and the result based on the chosen settings
+ */
 public class System {
 	String title, displayOption, title2, operation;
 	int numCount, min, max, maxDigit, inclusiveRange, answer, interval, index;
