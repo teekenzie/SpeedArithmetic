@@ -7,6 +7,9 @@ import javax.swing.ImageIcon;
 import java.awt.Image;
 import java.util.Objects;
 
+/** 
+ * Creates the screen that shows the users the numbers and an input field
+ */
 public class GUI2 extends JFrame
 {
     int length, width, result;
