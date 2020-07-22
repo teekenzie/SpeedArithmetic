@@ -1,8 +1,11 @@
 import javax.swing.*;
-
 import java.awt.*;
 import java.awt.event.*;
 import java.util.Objects;
+
+/**
+ * Creates the main screen that allows the users to select their settings
+ */
 
 public class GUI extends JFrame
 {
