@@ -10,7 +10,7 @@ import java.util.Objects;
 public class GUI extends JFrame
 {
 	JLabel labelTitle,labelTitle2 ,labelNumCounts, labelRange,labelRange2, labelInterval,
-		labelInterval2,labelInterval3, labelName;
+		labelInterval2,labelInterval3;
 	JButton buttonAllNums, buttonOneNum, buttonNext, buttonReset, buttonAdd, buttonMultiply;
 	System system;
 	JTextField textFieldNumCounts, textFieldRange1, textFieldRange2;
@@ -31,11 +31,6 @@ public class GUI extends JFrame
         thePanel.setLayout(null);
         ListenForButton lForButton = new ListenForButton();
         this.setTitle("SpeedArithmetic");
-        
-        labelName = new JLabel("Made By: Kenzie Tee");
-        thePanel.add(labelName);
-        labelName.setFont(new Font("Serif", Font.BOLD, 18 ));
-        labelName.setBounds(148,30,200,50);
         
         labelTitle = new JLabel(system.getTitle());
         thePanel.add(labelTitle);
@@ -174,12 +169,12 @@ public class GUI extends JFrame
             }
             else if(e.getSource()==buttonAdd)
             {
-            	system.operation("Add");
+            	system.operation("add");
             	page(pageNum+1);
             }
             else if (e.getSource()==buttonMultiply)
             {
-            	system.operation("Multiply");
+            	system.operation("multiply");
             	page(pageNum +1);
             }
         }
@@ -201,7 +196,6 @@ public class GUI extends JFrame
         }
         private void secondPage()
         {
-        	labelName.setVisible(false);
         	buttonAllNums.setVisible(false);
             buttonOneNum.setVisible(false);
             labelTitle.setText(system.getTitle());

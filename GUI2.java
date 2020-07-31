@@ -27,11 +27,11 @@ public class GUI2 extends JFrame
         //system = new System("one", 3, 1, 2, 2000, "add" );
         this.system= system;
         first = firstWindow;
-        if(system.getNumCount() >=25) {length= 745;}
+        if(system.getNumCount() >=25 && system.getDisplayOption().equals("all")) {length= 745;}
         else{length = system.getNumCount()*26 + 110;}
-        if(length<250) { length = 250;}
+        if(length<250 || system.getDisplayOption().equals("one")) { length = 250;}
         width = 250;
-        if(system.getNumCount()>25) {width = 400;}
+        if(system.getNumCount()>25 && system.getDisplayOption().equals("all")) {width = 400;}
         JPanel thePanel = new JPanel();
         this.setSize(width, length);
         this.setLocationRelativeTo(null);
