@@ -7,8 +7,8 @@ The user inputs the computed answer and the program checks the inputted answer a
 
 ## Table of contents
 * [Screenshots](#screenshots)
-* [Prerequisites](#prerequisites)
 * [Setup](#setup)
+* [Prerequisites](#prerequisites)
 * [Inspiration](#inspiration)
 * [Future Development](#future-development)
 * [Contact](#contact)
@@ -19,11 +19,12 @@ The user inputs the computed answer and the program checks the inputted answer a
 ![Screenshot1](./Screenshots/Screenshot3.JPG)
 ![Screenshot2](./Screenshots/Screenshot4.JPG)
 
-## Prerequisites
-Make sure you have the latest version of Java Runtime Environment.
-
 ## Setup
 If you would like to run the program, simply download the code to your local device. Then, run the "SpeedArithmetic.jar" file on your device. 
+
+## Prerequisites
+Make sure you have the latest version of Java SE Development Kit. <br>
+Click [here](https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html) to download the latest Java SE Development Kit.
 
 ## Inspiration
 This project was inspired when I was practicing my abacus mental arithmetic. It was very incovenient for me to randomly generate numbers from the calculator then adding them up so I decided to make this project. 
