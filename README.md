@@ -15,7 +15,7 @@ The user inputs the computed answer and the program checks the inputted answer a
 
 ## Screenshots
 ![Screenshot1](./Screenshots/Screenshot1.JPG)
-![Screenshot2](./Screenshots/Screenshot2.JPG)
+![Screenshot2](./Screenshots/Screenshot2.JPG)<br>
 ![Screenshot1](./Screenshots/Screenshot3.JPG)
 ![Screenshot2](./Screenshots/Screenshot4.JPG)
 
